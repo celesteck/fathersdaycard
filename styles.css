@@ -6,14 +6,14 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #87CEEB, #B2DFDB); /* Blue and pastel green gradient */
+    background: linear-gradient(135deg, #ADD8E6, #B2DFDB); /* Lighter blue and pastel green gradient */
     font-family: Arial, sans-serif;
     overflow: hidden;
     position: relative;
 }
 
 .card {
-    background: #ffffff;
+    background: #87CEEB; /* Different shade of blue */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -23,15 +23,14 @@ body {
     margin: 20px;
     position: relative;
     z-index: 1;
-    background: url('bbq-texture.jpg') center/cover no-repeat; /* Background texture for the card */
 }
 
 .card h1 {
-    color: #ff4500; /* Bright color */
-    font-size: 32px; /* Larger font size */
+    color: #006400; /* Dark green color */
+    font-size: 40px; /* Larger font size */
     margin-bottom: 20px;
     font-weight: bold;
-    text-shadow: 2px 2px #000; /* Add some shadow for effect */
+    font-family: 'Chewy', cursive; /* Bubbly font */
 }
 
 .photo-container {
@@ -67,7 +66,7 @@ button:hover {
     }
 
     .card h1 {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     button {
