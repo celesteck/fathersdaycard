@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Father's Day Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Happy Father's Day!</h1>
+        <div class="photo-container">
+            <img src="IMG_6674.jpg" alt="Father's Day Photo">
+        </div>
+        <button onclick="playSongAndConfetti()">Press </button>
+        <audio id="fathers-day-song" src="jbcip.mp3"></audio>
+    </div>
+    <div class="confetti"></div>
+
+    <script>
+        function playSongAndConfetti() {
+            const song = document.getElementById('fathers-day-song');
+            song.play();
+            createConfetti();
+        }
+
+        function createConfetti() {
+            const confettiContainer = document.querySelector('.confetti');
+            confettiContainer.innerHTML = ''; // Clear previous confetti
+            for (let i = 0; i < 100; i++) {
+                const confetto = document.createElement('div');
+                confetto.classList.add('confetto');
+                confetto.style.left = `${Math.random() * 100}vw`;
+                confetto.style.animationDelay = `${Math.random() * 3}s`;
+                confetto.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confettiContainer.appendChild(confetto);
+            }
+        }
+    </script>
+</body>
+</html>
